@@ -1,0 +1,34 @@
+
+
+*{
+  font-size:35px;
+}
+
+.a1{
+  color:#0000AA;
+}
+
+.a2{
+  color:#00AA00;
+}
+
+.a3{
+  color:#00AAAA;
+}
+
+.a4{
+  color:#AA0000;
+}
+
+.a5{
+  color:#AA00AA;
+}
+
+.a6{
+  color:#FFAA00;
+}
+
+p{
+  margin:none;
+  padding:none;
+}
