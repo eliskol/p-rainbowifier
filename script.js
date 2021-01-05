@@ -1,6 +1,6 @@
 var input = document.getElementById('input');
 var output = document.getElementById('output');
-
+//a
 input.addEventListener("focusout",function(){
 
 var vis = document.getElementById('visualizer'); //unneccesary for now
