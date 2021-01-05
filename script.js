@@ -1,13 +1,13 @@
 var input = document.getElementById('input');
 var output = document.getElementById('output');
+
 input.addEventListener("focusout",function(){
 
-  var allP = document.getElementsByTagName('p');
-  for(var k = 0; k < allP.length; k++){
-    allP[k + 2].remove();
-  }
+var vis = document.getElementById('visualizer'); //unneccesary for now
+var div = document.createElement('div');
 
 var e = input.value.split("");
+
 
   for(var i = 0; i < input.value.length; i++){
 
@@ -18,27 +18,29 @@ var e = input.value.split("");
     var j = i;
   }
 
-    var p = document.createElement('p');
+
+
+    var p = document.createElement('strong');
     p.innerText = e[i];
     p.className += "a" + (Number(j)+1);
-    document.getElementsByTagName('div')[0].appendChild(p);
-
+    // if(i == input.value.length){
+    //   p.style.visibility = 'none';
+    // }
+    div.appendChild(p);
   e[i] = "§" + String(Number(j)+1) + e[i];
   var f = e.join("");
   output.value = f;
-  
+
 
 
   }
-
-
-
+document.body.appendChild(div);
   if(localStorage.getItem('copy') == 'on'){
     output.select();
     document.execCommand("copy");
   }
 
-  
+
 
   });
 
