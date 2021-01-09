@@ -3,10 +3,11 @@ var output = document.getElementById('output');
 //a
 input.addEventListener("focusout",function(){
 
+var c = document.getElementById('cc');
+  
 var vis = document.getElementById('visualizer'); //unneccesary for now
 var div = document.createElement('div');
 
-var e = input.value.split("");
 
 
   for(var i = 0; i < input.value.length; i++){
@@ -19,7 +20,8 @@ var e = input.value.split("");
   }
 
 
-
+if(c.value == "rgb"){
+    var e = input.value.split("");
     var p = document.createElement('strong');
     p.innerText = e[i];
     p.className += "a" + (Number(j)+1);
@@ -30,7 +32,11 @@ var e = input.value.split("");
   e[i] = "§" + String(Number(j)+1) + e[i];
   var f = e.join("");
   output.value = f;
-
+}
+    else if(c.value == "darkBlue"){
+    var e = "§1"+input.value;
+     output.value = e;
+    }
 
 
   }
