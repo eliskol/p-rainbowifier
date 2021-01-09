@@ -7,9 +7,26 @@ var c = document.getElementById('cc');
   
 var vis = document.getElementById('visualizer'); //unneccesary for now
 var div = document.createElement('div');
+var p = document.createElement('strong');
 
+if(c.value == "darkBlue"){
+    var e = "§1"+input.value;
+    output.value = e;
+    
+  
+    //create visualization
+    var p = document.createElement('strong');
+    p.innerText = e;
+    p.className += "a1";
+    div.appendChild(p);
+}
 
-
+  
+  
+  
+  
+  
+else if(c.value == "rgb"){
   for(var i = 0; i < input.value.length; i++){
 
   if(i > 5){
@@ -20,7 +37,6 @@ var div = document.createElement('div');
   }
 
 
-if(c.value == "rgb"){
     var e = input.value.split("");
     var p = document.createElement('strong');
     p.innerText = e[i];
@@ -29,17 +45,18 @@ if(c.value == "rgb"){
     //   p.style.visibility = 'none';
     // }
     div.appendChild(p);
-  e[i] = "§" + String(Number(j)+1) + e[i];
-  var f = e.join("");
-  output.value = f;
-}
-    else if(c.value == "darkBlue"){
-    var e = "§1"+input.value;
-     output.value = e;
-    }
+    e[i] = "§" + String(Number(j)+1) + e[i];
+    var f = e.join("");
+    output.value = f;
+ 
+    
+
 
 
   }
+ }
+  
+//outside the loop now
 document.body.appendChild(div);
   if(localStorage.getItem('copy') == 'on'){
     output.select();
@@ -48,7 +65,7 @@ document.body.appendChild(div);
 
 
 
-  });
+  }); //end of eventlistener function
 
 
 
