@@ -8,25 +8,12 @@ var c = document.getElementById('cc');
 var vis = document.getElementById('visualizer'); //unneccesary for now
 var div = document.createElement('div');
 var p = document.createElement('strong');
-
-if(c.value == "darkBlue"){
-    var e = "§1"+input.value;
-    output.value = e;
-    
-  
-    //create visualization
-    var p = document.createElement('strong');
-    p.innerText = e;
-    p.className += "a1";
-    div.appendChild(p);
-}
-
   
   
   
   
   
-else if(c.value == "rgb"){
+if(c.value == "rgb"){
   for(var i = 0; i < input.value.length; i++){
 
   if(i > 5){
@@ -54,9 +41,23 @@ else if(c.value == "rgb"){
 
 
   }
- }
+ }//end of rgb
+
+else{
+    var e = "§" + c.value + input.value;
+    output.value = e;
+    
   
-//outside the loop now
+    //create visualization
+    var p = document.createElement('strong');
+    p.innerText = e;
+    p.className += "a" + c.value;
+    div.appendChild(p);
+}
+  
+  
+  
+  
 document.body.appendChild(div);
   if(localStorage.getItem('copy') == 'on'){
     output.select();
