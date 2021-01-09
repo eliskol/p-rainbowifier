@@ -4,15 +4,15 @@ var output = document.getElementById('output');
 input.addEventListener("focusout",function(){
 
 var c = document.getElementById('cc');
-  
+
 var vis = document.getElementById('visualizer'); //unneccesary for now
 var div = document.createElement('div');
 var p = document.createElement('strong');
-  
-  
-  
-  
-  
+
+
+
+
+
 if(c.value == "rgb"){
   for(var i = 0; i < input.value.length; i++){
 
@@ -35,8 +35,8 @@ if(c.value == "rgb"){
     e[i] = "§" + String(Number(j)+1) + e[i];
     var f = e.join("");
     output.value = f;
- 
-    
+
+
 
 
 
@@ -46,19 +46,19 @@ if(c.value == "rgb"){
 else{
     var e = "§" + c.value + input.value;
     output.value = e;
-    
-  
+
+
     //create visualization
     var p = document.createElement('strong');
     p.innerText = e;
     p.className += "a" + c.value;
     div.appendChild(p);
 }
-  
-  
-  
-var allP = document.getElementsByTagName('div');
-document.body.insertBefore(div, p[1]);
+
+
+
+var iBH = document.getElementsByTagName('div')[0];
+document.body.insertBefore(div, iBH);
   if(localStorage.getItem('copy') == 'on'){
     output.select();
     document.execCommand("copy");
