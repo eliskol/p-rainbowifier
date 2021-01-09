@@ -57,8 +57,8 @@ else{
   
   
   
-  
-document.body.appendChild(div);
+var allP = document.getElementsByTagName('p');
+document.body.insertBefore(div, p[3]);
   if(localStorage.getItem('copy') == 'on'){
     output.select();
     document.execCommand("copy");
