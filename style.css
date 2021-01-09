@@ -1,9 +1,10 @@
 select{
   height:10%;
+  font-size:30px;
 }
 
 option{
-  font-size:10px;
+  font-size:30px;
   padding:2px;
 }
 
@@ -12,29 +13,68 @@ option{
 }
 
 .a1{
-  color:#0000AA;
+  color:#0000AA; //dark blue
 }
 
 .a2{
-  color:#00AA00;
+  color:#00AA00; //dark green
 }
 
 .a3{
-  color:#00AAAA;
+  color:#00AAAA; //dark aqua
 }
 
 .a4{
-  color:#AA0000;
+  color:#AA0000; //dark red
 }
 
 .a5{
-  color:#AA00AA;
+  color:#AA00AA; //dark purple
 }
 
 .a6{
-  color:#FFAA00;
+  color:#FFAA00; //gold
 }
 
+.a7{
+  color:#AAAAAA; //gray
+}
+
+.a8{
+  color:555555; //dark gray
+}
+
+.a9{
+  color:#5555FF; //blue
+}
+
+.aa{
+  color:#55FF55;
+}
+
+.ab{
+  color:#55FFFF;
+}
+
+.ac{
+  color:#FF5555;
+}
+
+.ad{
+  color:#FF55FF;
+}
+
+.ae{
+  color:#FFFF55;
+}
+
+.af{
+  color:#FFFFFF;
+}
+
+.ag{
+  color:#DDD605;
+}
 p{
   margin:none;
   padding:none;
