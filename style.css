@@ -75,6 +75,22 @@ option{
 .ag{
   color:#DDD605;
 }
+
+.al{
+  font-weight:bold;
+}
+
+.am{
+  text-decoration: line-through;
+}
+
+.an{
+  text-decoration: underline;
+}
+
+.ao{
+  font-style: italic;
+}
 p{
   margin:none;
   padding:none;

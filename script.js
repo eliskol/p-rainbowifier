@@ -4,7 +4,7 @@ var output = document.getElementById('output');
 input.addEventListener("focusout",function(){
 
 var c = document.getElementById('cc');
-
+var fc = document.getElementById('fc');
 var vis = document.getElementById('visualizer'); //unneccesary for now
 var div = document.createElement('div');
 var p = document.createElement('strong');
@@ -52,11 +52,13 @@ else{
     var p = document.createElement('strong');
     p.innerText = e;
     p.className += "a" + c.value;
-    div.appendChild(p);
 }
 
-
-
+if(fc.value !== ""){
+  p.className += " a" + fc.value;
+  output.value = "§" + fc.value + output.value;
+}
+    div.appendChild(p);
 var iBH = document.getElementsByTagName('div')[0];
 document.body.insertBefore(div, iBH);
   if(localStorage.getItem('copy') == 'on'){
