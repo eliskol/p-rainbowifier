@@ -14,6 +14,7 @@ var p = document.createElement('strong');
 
 
 if(c.value == "rgb"){
+  output.value = "";
   for(var i = 0; i < input.value.length; i++){
 
   if(i > 5){
@@ -26,39 +27,45 @@ if(c.value == "rgb"){
 
     var e = input.value.split("");
     var p = document.createElement('strong');
-    p.innerText = e[i];
+
     p.className += "a" + (Number(j)+1);
-    // if(i == input.value.length){
-    //   p.style.visibility = 'none';
-    // }
+     // if(i == input.value.length){
+     //   p.style.visibility = 'none';
+     // }
     div.appendChild(p);
     e[i] = "§" + String(Number(j)+1) + e[i];
-    var f = e.join("");
-    output.value = f;
+    output.value += e[i];
+    p.innerText = e[i];
+
+
 
 
 
 
 
   }
+
  }//end of rgb
 
-else{
-    var e = "§" + c.value + input.value;
-    output.value = e;
+ else{
+     var e = "§" + c.value + input.value;
+     output.value = e;
 
 
-    //create visualization
-    var p = document.createElement('strong');
-    p.innerText = e;
-    p.className += "a" + c.value;
+     //create visualization
+     var p = document.createElement('strong');
+     p.innerText = e;
+     p.className += "a" + c.value;
 }
 
 if(fc.value !== ""){
   p.className += " a" + fc.value;
   output.value = "§" + fc.value + output.value;
+  console.log('formatting added');
 }
+
     div.appendChild(p);
+
 var iBH = document.getElementsByTagName('div')[0];
 document.body.insertBefore(div, iBH);
   if(localStorage.getItem('copy') == 'on'){
